@@ -1,0 +1,30 @@
+Indexing :
+
+1.single field
+db.students.createIndex({ age: 1 })
+
+
+2.compound
+
+db.employees.createIndex({ department: 1, salary: -1 })
+
+
+3.text
+db.articles.createIndex({ title: "text", content: "text" })
+
+
+4.goepartial
+db.locations.createIndex({ category: 1 }, { partialFilterExpression: { category: { $exists: true } } })
+
+
+5.Create index method
+db.collection.createIndex(keys, options)
+db.users.createIndex({ name: 1, age: -1 }, { unique: true })
+
+
+// drop indexing
+db.collection.dropIndex('name_of_index');
+db.people.dropIndex({name: 1})
+
+// Get indexing
+db.collection.getIndexes()

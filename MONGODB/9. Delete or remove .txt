@@ -1,0 +1,18 @@
+// Delete
+
+db.courses.deleteOne({id:3})  or  db.people.remove({name: 'Tom'})
+
+// Delete any  one document("data delete insede database") Details 
+Explain : db.collectioname.deteleone({id:5})
+Query :db.data.deleteOne({id:5})
+
+// Delete whole Document record 
+Explain : db.collectioname.deteleone({id:5})
+Query :db.data.deleteMany({Price:50})
+
+
+// deleteMany
+// Delete operation for documents with specified names
+db.collection.deleteMany(
+  { Name: { $in: ["Amelia", "Henry"] } } // Delete documents with names "Amelia" or "Henry"
+);

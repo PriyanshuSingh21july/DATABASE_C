@@ -1,0 +1,40 @@
+Q.Perform validation of schema
+:-
+db.createCollection("users", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["username", "email"],
+         properties: {
+            username: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+            email: {
+               bsonType: "string",
+               pattern: "^\\S+@\\S+\\.\\S+$",
+               description: "must be a string and match the regular expression pattern"
+            },
+            age: {
+               bsonType: "int",
+               minimum: 18,
+               description: "must be an integer and greater than or equal to 18"
+            }
+         }
+      }
+   }
+})
+
+// Insertion perform
+
+db.users.insertOne({
+    username: "Saurabh",
+    email: "saurabh@gmail.com",
+    age: 21
+})
+
+insertion in case of error in validtion then show
+ description: "must be a string and is required"
+  description: "must be a string and match the regular expression pattern"
+  description: "must be an integer and greater than or equal to 18"
+            

@@ -1,0 +1,42 @@
+Query:
+
+  _id: ObjectId('6605302271e19350f1e4bc53'),
+  Name: 'Priyanshu',
+  Age: 20,
+  Gender: 'Male',
+  Branch: 'IT',
+  City: 'Mumbai'
+
+
+Modeling 
+{
+  "_id": ObjectId("6605302271e19350f1e4bc53"),
+  "name": "Priyanshu",
+  "age": 20,
+  "gender": "Male",
+  "branch": "IT",
+  "city": "Mumbai",
+  "createdAt": ISODate("..."),
+  "updatedAt": ISODate("...")
+}
+
+
+sperate Modeling
+{
+    _id: ,
+    Std_ID: "987STD001"
+    Personal_details:{
+        First_Name: "Rashmika",
+        Last_Name: "Sharma",
+        Date_Of_Birth: "1999-08-26"
+    },
+    Contact: {
+        e-mail: "rashmika_sharma.123@gmail.com",
+        phone: "9987645673"
+    },
+    Address: {
+        city: "Karnataka",
+        Area: "BTM2ndStage",
+        State: "Bengaluru"
+    }
+}

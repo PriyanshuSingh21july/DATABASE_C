@@ -1,0 +1,12 @@
+Q. database create collection  in database automatically
+
+// use database name
+
+Query : db.Collection_name.insertone({"Name":"Priyanshu"})
+Query : db.data.insertOne({Name:"Priyanshu", Gender:"Male",Age:21})
+
+
+Q.Create Collection in database(method 2 appropriate)
+Explain : db.createCollection("Collection name")
+Query : db.createCollection("XYZ")
+Query : db.createCollection("Resources");

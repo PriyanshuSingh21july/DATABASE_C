@@ -1,0 +1,7 @@
+2.Insert
+
+db.DETAILS.insert({State: "Bihar", Marks: 500})
+
+Or 
+
+db.people.save({name: 'Tom', age: 28});

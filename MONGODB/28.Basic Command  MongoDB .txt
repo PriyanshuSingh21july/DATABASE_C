@@ -1,0 +1,38 @@
+1.mongo: Starts the MongoDB shell and connects to the default MongoDB instance running on localhost and port 27017.
+mongo
+
+2.show dbs: Lists all the databases available on the MongoDB server.
+show dbs
+
+3.use <database>: Switches to the specified database.
+use mydatabase
+
+4.show collections: Lists all the collections in the current database.
+show collections
+
+
+5.use <collectioname>: Switches to the specified collectioname.
+use admin  //collectioname
+
+6.db: Displays the current database.
+db
+
+7.show users: Lists all the users in the current database.
+show users
+
+8.show roles: Lists all the roles defined in the current database.
+show roles
+
+9.db.createUser(): Creates a new user with the specified privileges.
+db.createUser({
+  user: "admin",
+  pwd: "admin123",
+  roles: ["root"]
+})
+
+10.db.dropUser(): Deletes an existing user from the database.
+db.dropUser("admin")
+
+
+11.db.dropDatabase() command is used to drop a existing database.
+db.dropDatabase()

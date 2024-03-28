@@ -1,0 +1,9 @@
+// Sort in data
+
+1.basis of name
+db.temp.find().sort({Name:1})
+
+2.basis on age
+db.temp.find().sort({Age:-1}) // dcerasing order
+
+3. // can sort using any value
