@@ -1,7 +1,0 @@
-//Create database student
-use student
-switched to db student
-
-
-// create database Vivek
-use Vivek
