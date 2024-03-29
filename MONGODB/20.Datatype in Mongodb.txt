@@ -1,0 +1,39 @@
+Q.Data type in Mongodb
+Ans : text , Boolean ,Number(Integer , NumberLong , NumberDecimal) ,Arry, Date
+
+
+db.data.insert({Name:"RajKumar",Aadhar:true, Salary:700000,ID:94636273848458956,
+employees:[{ Name:"Rajkumar",Role:"Software engnneer"},
+ { Conutry:"USA",City:"Newyork"},],Join:new Date(),Foundtimestamp:new Timestamp()})
+
+
+{
+  "_id": {
+    "$oid": "6604fe0e71e19350f1e4bc4d"
+  },
+  "Name": "RajKumar",    // Text database
+  "Aadhar": true,       // Boolean
+  "Salary": 700000,    // Integer
+  "ID": 94636273848458960, // IntegerLong
+
+  "employees": [
+    {
+      "Name": "Rajkumar",       //Array
+      "Role": "Software engnneer"
+    },
+    {
+      "Conutry": "USA",
+      "City": "Newyork"
+    }
+  ],
+
+  "Join": {
+    "$date": "2024-03-28T05:20:14.073Z"
+  },                                  //Date
+  "Foundtimestamp": {
+    "$timestamp": {
+      "t": 1711603214,
+      "i": 1
+    }
+  }
+}

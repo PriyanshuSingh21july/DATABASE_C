@@ -1,0 +1,3 @@
+// limit to acess value
+
+db.temp.find().limit(3)

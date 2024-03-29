@@ -1,0 +1,82 @@
+********CRUD************
+********R**************
+
+Q. SHow data in database
+
+db.collectionname.find()
+
+db.data.find()
+db.courses.find() --
+db.courses.findOne() --
+db.courses.find() --
+
+
+
+Q.Find data with condtion(Name krishna)
+Query: 
+db.data.find({"Name":"Krishna"}).pretty();
+Ans  {
+  _id: ObjectId('660473a36130325e1fcfb6f7'),
+  Name: 'Krishna',
+  Age: 20,
+  Salry: 70000,
+  ids: {
+    Aadhar: true,
+    Pan: false,
+    Accountno: true
+  }
+}
+
+
+Q.Find data with condtion
+db.students.find({ name: 'David'}).pretty();
+{
+  _id: ObjectId('660477346130325e1fcfb6fb'),
+  name: 'David',
+  age: 19,
+  city: 'Boston',
+  state: 'MA',
+  country: 'USA'
+}
+
+Q.Nested insert
+Query: db.data.insert({Name:"RajKumar",Aadhar:true, Salary:700000,ID:94636273848458956,employees:[{ Name:"Rajkumar",Role:"Software engnneer"}, { Conutry:"USA",City:"Newyork"}]})
+{
+  _id: ObjectId('6604fc3a71e19350f1e4bc4b'),
+  Name: 'RajKumar',
+  Aadhar: true,
+  Salary: 700000,
+  ID: 94636273848458960,
+  employees: [
+    {
+      Name: 'Rajkumar',
+      Role: 'Software engnneer'
+    },
+    {
+      Conutry: 'USA',
+      City: 'Newyork'
+    }
+  ]
+}
+
+***********************************************.Find Using Boolean Condition ******************************
+
+Q.$and operator
+$and 
+
+db.temp.find({
+  $and: [
+    { Gender: "Male" },
+    { Age: { $gt: 23 } } // Assuming age greater than 23 is a criteria for being male
+  ]
+})
+
+
+Q.$or operator
+
+db.temp.find({
+  $or: [
+    { Gender: "Female" },
+    { Age: { $gt: 23 } } // Assuming age greater than 23 is a criteria for being male
+  ]
+})

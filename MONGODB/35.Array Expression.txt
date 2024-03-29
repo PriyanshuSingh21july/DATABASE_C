@@ -1,0 +1,56 @@
+// Sample data for 10 persons
+var personsData = [
+    {
+        name: "John",
+        age: 30,
+        hobbies: ["reading", "cooking", "hiking"]
+    },
+    {
+        name: "Alice",
+        age: 25,
+        hobbies: ["painting", "gardening"]
+    },
+    {
+        name: "Michael",
+        age: 35,
+        hobbies: ["photography", "traveling"]
+    },
+    {
+        name: "Emily",
+        age: 28,
+        hobbies: ["baking", "yoga"]
+    },
+    {
+        name: "David",
+        age: 32,
+        hobbies: ["playing guitar", "running"]
+    },
+    {
+        name: "Sophia",
+        age: 27,
+        hobbies: ["playing piano", "swimming"]
+    },
+    {
+        name: "William",
+        age: 29,
+        hobbies: ["coding", "playing basketball"]
+    },
+    {
+        name: "Emma",
+        age: 31,
+        hobbies: ["dancing", "fishing"]
+    },
+    {
+        name: "Olivia",
+        age: 26,
+        hobbies: ["watching movies", "travelling"]
+    },
+    {
+        name: "James",
+        age: 33,
+        hobbies: ["gardening", "hiking"]
+    }
+];
+
+// Insert the data into a new collection named 'persons'
+db.persons.insertMany(personsData);

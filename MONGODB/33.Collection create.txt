@@ -1,0 +1,9 @@
+Q.Create collection
+
+ db.createCollection("yourCollectionName") 
+
+Q.Use collection
+use collectionname
+
+Q.Drop collection
+db.newCollection1.drop()

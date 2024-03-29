@@ -1,0 +1,185 @@
+There is 4 aggregate Operation
+1.match 2.group 3.sort 4.limit
+
+db.collection.aggregate([
+    { $match: { field: { $gt: value } } },  // Filter documents based on a condition
+    { $group: { _id: "$field", count: { $sum: 1 } } },  // Group documents and compute count
+    { $sort: { count: -1 } },  // Sort documents based on count in descending order
+    { $limit: 5 }  // Limit the output to 5 documents
+])
+
+1.$match
+
+db.temp.aggregate({$match:{"Gender":"Female"}})
+
+
+2.$group
+
+db.temp.aggregate([
+    {
+        $group: {
+            _id: "$Age",
+            count: { $sum: 1 },
+            data: { $push: "$$ROOT" }
+        }
+    },
+    {
+        $sort: { _id: 1 }
+    }
+])
+
+
+db.temp.aggregate([
+    {
+        $match: {
+            Gender: "Female"
+        }
+    },
+    {
+        $group: {
+            _id: "$Gender",
+            count: { $sum: 1 },
+            data: { $push: "$$ROOT" }
+        }
+    }
+])
+
+
+3.$sort
+
+db.temp.aggregate([
+    {
+        $sort: {
+            Name: 1
+        }
+    }
+])
+
+
+4.$limit
+db.temp.aggregate([
+    {
+        $sort: {
+            Name: 1
+        }
+    },
+    {
+        $limit: 5
+    }
+])
+
+
+5.$sum
+db.sales.aggregate([
+    {
+        $group: {
+            _id: null, // Grouping by null to calculate across all documents
+            totalSales: { $sum: "$amount" } // Calculate the sum of the "amount" field
+        }
+    }
+])
+
+6.$min , $max
+
+db.temperatures.aggregate([
+    {
+        $group: {
+            _id: null, // Grouping by null to calculate across all documents
+            minTemperature: { $min: "$temperature" }, // Calculate the minimum temperature
+            maxTemperature: { $max: "$temperature" }  // Calculate the maximum temperature
+        }
+    }
+])
+
+
+7.$avg
+db.grades.aggregate([
+    {
+        $group: {
+            _id: null, // Grouping by null to calculate across all documents
+            avgScore: { $avg: "$score" } // Calculate the average score
+        }
+    }
+])
+
+
+
+8.$toupper
+db.users.aggregate([
+    {
+        $project: {
+            _id: 0, // Exclude _id field
+            upperName: { $toUpper: "$name" } // Convert name to uppercase
+        }
+    }
+])
+
+9.$tolower
+db.users.aggregate([
+    {
+        $project: {
+            _id: 0, // Exclude _id field
+            lowerName: { $toLower: "$name" } // Convert name to lowercase
+        }
+    }
+])
+
+
+10.$count
+db.orders.aggregate([
+    {
+        $count: "totalOrders" // Count the total number of documents
+    }
+])
+
+11.$lookup
+
+db.orders.aggregate([
+    {
+        $lookup: {
+            from: "customers", // Name of the collection to join
+            localField: "customerId", // Field from the input documents
+            foreignField: "_id", // Field from the documents of the "customers" collection
+            as: "customer" // Name of the field to store the joined documents
+        }
+    }
+])
+
+
+12.$unwind
+
+db.products.aggregate([
+    {
+        $unwind: "$tags" // Unwind the "tags" array
+    }
+])
+
+
+
+all operator
+
+$match: Filters documents to pass only those that match specified conditions.
+$group: Groups documents by a specified expression and applies accumulator expressions.
+$project: Reshapes documents by including, excluding, or renaming fields.
+$sort: Sorts documents by specified fields.
+$limit: Limits the number of documents passed to the next stage in the pipeline.
+$unwind: Deconstructs an array field from the input documents to output a document for each element.
+$lookup: Performs a left outer join to another collection in the same database to filter in documents from the "joined" collection for processing.
+$addFields: Adds new fields to documents.
+$sum: Calculates the sum of numeric values.
+$avg: Calculates the average of numeric values.
+$min: Returns the minimum value.
+$max: Returns the maximum value.
+$count: Returns the total number of documents in the aggregation pipeline.
+$dateFromString: Converts a string to a date.
+$dateToString: Converts a date to a string.
+$add: Adds two dates together.
+$subtract: Subtracts two dates.
+$cond: Evaluates a boolean expression and returns one of two specified outcomes.
+$redact: Restricts the content of documents based on information stored in the documents themselves.
+$concat: Concatenates strings.
+$split: Splits a string into an array of substrings based on a delimiter.
+$indexOfArray: Returns the index of the first occurrence of a specified value in an array.
+$setUnion: Returns the union of two arrays.
+$setDifference: Returns the difference between two arrays.
+$setIntersection: Returns the intersection of two arrays.

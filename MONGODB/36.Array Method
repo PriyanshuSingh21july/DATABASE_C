@@ -1,0 +1,121 @@
+1.$pull
+db.collection.update(
+   { name: "James" }, // Match condition
+   { $pull: { hobbies: "gardening" } } // Pull operation
+)
+
+{
+    name: "James",
+    age: 33,
+    hobbies: ["hiking"]
+}
+
+
+********************************************************************************************************************
+2.$pop 
+db.collection.update(
+   { name: "James" }, // Match condition
+   { $pull: { hobbies: "gardening" } } // Pull operation
+)
+
+{
+  _id: ObjectId('660692196c87aeaeb6e9d0d3'),
+  name: 'James',
+  age: 33,
+  hobbies: [
+    'hiking'
+  ]
+}
+
+
+********************************************************************************************************************
+MongoDB - $pullAll Operator
+The $pullAll operator removes all instances of the specified values from an array field.
+
+
+db.collection.update(
+   { _id: ObjectId("1234567890") }, 
+   { $pullAll: { hobbies: ["reading", "swimming"] } }
+)
+
+
+********************************************************************************************************************
+
+ MongoDB - $push Operator
+The $push operator appends a specified value to an array field.
+
+db.collection.update(
+   { _id: ObjectId("1234567890") }, 
+   { $push: { hobbies: "painting" } }
+)
+
+
+********************************************************************************************************************
+
+3. MongoDB - Positional Operator ($)
+The positional operator $ identifies an element in an array to update without explicitly specifying the position.
+
+db.collection.update(
+   { "hobbies": "reading" },
+   { $set: { "hobbies.$": "cooking" } }
+)
+
+
+********************************************************************************************************************
+
+4. MongoDB - All Positional Operator ($[])
+The all positional operator $[] identifies all elements in an array to update without specifying the position.
+
+
+db.collection.update(
+   {},
+   { $inc: { "hobbies.$[]": 5 } }
+)
+
+
+********************************************************************************************************************
+
+5. MongoDB - $position Modifier
+The $position modifier specifies the position in the array to add an element with $push.
+
+db.collection.update(
+   { _id: ObjectId("1234567890") }, 
+   { $push: { hobbies: { $each: ["singing"], $position: 1 } } }
+)
+
+
+********************************************************************************************************************
+
+6. MongoDB - $addToSet Operator
+The $addToSet operator adds elements to an array only if they do not already exist.
+
+db.collection.update(
+   { _id: ObjectId("1234567890") }, 
+   { $addToSet: { hobbies: "dancing" } }
+)
+
+
+********************************************************************************************************************
+
+7. MongoDB - $each Modifier
+The $each modifier allows multiple values to be specified with $push or $addToSet.
+
+db.collection.update(
+   { _id: ObjectId("1234567890") }, 
+   { $push: { hobbies: { $each: ["singing", "dancing"] } } }
+)
+
+
+********************************************************************************************************************
+
+8. MongoDB - $sort Modifier
+The $sort modifier sorts the elements in an array during an update.
+
+db.collection.update(
+   { _id: ObjectId("1234567890") }, 
+   { $push: { hobbies: { $each: ["singing", "dancing"], $sort: 1 } } }
+)
+
+
+
+********************************************************************************************************************

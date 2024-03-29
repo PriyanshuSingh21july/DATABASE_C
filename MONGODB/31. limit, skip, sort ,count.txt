@@ -1,0 +1,16 @@
+1.Count operation
+
+db.data.find().count();   // conu number of dcument
+
+
+2. skip operation
+
+db.data.find().skip(5);   //skip 5 document
+
+
+3.limit 
+
+db.data.find().limit(3);   // limit to acess limit document
+
+4.Sort 
+db.temp.find({}).sort({ "name" : 1}) //sort document

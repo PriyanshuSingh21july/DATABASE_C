@@ -1,0 +1,8 @@
+
+
+
+Uses JavaScript instead of Procedures.       
+It is a schema-less database written in C++.
+Provides high performance.
+Stores files of any size easily without complicating your stack.
+Indexing

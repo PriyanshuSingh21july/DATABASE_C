@@ -1,0 +1,87 @@
+// Update
+
+updateOne()
+db.courses.updateOne( { Name: "Vivek" }, { $set: { id: 2 } } ) 
+db.courses.updateOne( { Name: "Vivek" }, { $set: { Name: "Priyanshu" } } ) 
+db.courses.updateOne( { Name: "Krishna" }, { $set: { id: 3 } } ) 
+db.data.updateOne({"Name":"Anu"},{$set:{Age:23}})
+
+
+/*    Updatemany()  */
+Explain: data is collection name
+db.data.updateMany({"Branch":"CSE"},{$set:{Cgpa:9.5}})
+
+/*     Update many Example          */
+db.temp.updateMany(
+  { Name: { $in: ["Amelia", "Henry"] } }, // Update documents with names "Amelia" or "Henry"
+  { $set: { Age: 40 } }
+);
+
+
+/*    update        */
+db.data.update({Age:19},{$set:{Age:18}});
+
+
+****************************************Update operator************************************************
+
+// $set: Sets the value of a field in a document
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $set: { age: 30 } }
+);
+
+
+
+// $unset: Removes a field from a document
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $unset: { age: "" } }
+);
+
+
+
+// $inc: Increments the value of a field by a specified amount
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $inc: { salary: 100 } }
+);
+
+
+
+// $push: Adds an element to an array field
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $push: { hobbies: "Reading" } }
+);
+
+
+
+// $addToSet: Adds an element to an array field if it doesn't already exist
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $addToSet: { hobbies: "Reading" } }
+);
+
+
+
+// $pop: Removes the first or last element of an array field
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $pop: { hobbies: -1 } } // Remove the first element
+);
+
+
+
+// $pull: Removes all instances of a value from an array field
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $pull: { hobbies: "Gaming" } }
+);
+
+
+
+// $rename: Renames a field
+db.collection.updateOne(
+  { _id: ObjectId("...") },
+  { $rename: { "old_field": "new_field" } }
+);

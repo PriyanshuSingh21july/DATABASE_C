@@ -1,0 +1,56 @@
+Q.Transction operation
+// Step 1: Create the collection
+db.createCollection("credit")
+
+// Step 2: Insert 10 persons with ID, Name, Gender, Age, and Balance fields
+var persons = [
+    { ID: 1, Name: "John", Gender: "Male", Age: 30, Balance: 1000 },
+    { ID: 2, Name: "Alice", Gender: "Female", Age: 25, Balance: 1500 },
+    { ID: 3, Name: "Bob", Gender: "Male", Age: 35, Balance: 2000 },
+    { ID: 4, Name: "Emma", Gender: "Female", Age: 28, Balance: 1200 },
+    { ID: 5, Name: "Michael", Gender: "Male", Age: 40, Balance: 1800 },
+    { ID: 6, Name: "Sophia", Gender: "Female", Age: 32, Balance: 2200 },
+    { ID: 7, Name: "David", Gender: "Male", Age: 45, Balance: 1300 },
+    { ID: 8, Name: "Olivia", Gender: "Female", Age: 27, Balance: 1900 },
+    { ID: 9, Name: "James", Gender: "Male", Age: 33, Balance: 1600 },
+    { ID: 10, Name: "Emily", Gender: "Female", Age: 29, Balance: 1400 }
+]
+
+// Inserting the documents into the collection
+db.credit.insertMany(persons)
+
+
+
+**************************************Here perform transction opertion **********************************************
+
+// Retrieve John's document
+var john = db.credit.findOne({ ID: 1 });
+
+// Retrieve Alice's document
+var alice = db.credit.findOne({ ID: 2 });
+
+// Define the transaction amount
+var transactionAmount = 500;
+
+// Verify if John has sufficient balance for the transaction
+if (john.Balance >= transactionAmount) {
+    // Deduct transaction amount from John's balance
+    db.credit.updateOne({ ID: 1 }, { $inc: { Balance: -transactionAmount } });
+
+    // Add transaction amount to Alice's balance
+    db.credit.updateOne({ ID: 2 }, { $inc: { Balance: transactionAmount } });
+
+    print("Transaction successful.");
+} else {
+    print("Insufficient balance for transaction.");
+}
+
+
+
+
+
+
+
+
+
+

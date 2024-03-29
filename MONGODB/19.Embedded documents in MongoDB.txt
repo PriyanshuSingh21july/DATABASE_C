@@ -1,0 +1,16 @@
+Q.Embedded documents in MongoDB
+
+
+db.data.updateOne({"Name":"Krishna"},{$set:{ids:{Aadhar:true,Pan:false,Accountno:true}}});
+
+{
+  _id: ObjectId('660473a36130325e1fcfb6f7'),
+  Name: 'Krishna',
+  Age: 20,
+  Salry: 70000,
+  ids: {
+    Aadhar: true,
+    Pan: false,
+    Accountno: true
+  }
+}

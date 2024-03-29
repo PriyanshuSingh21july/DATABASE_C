@@ -1,0 +1,231 @@
+$add: Adds numbers together or performs date arithmetic.
+
+
+// Example: Adding two numbers
+db.collection.aggregate([
+    {
+        $project: {
+            total: { $add: [5, 10] }
+        }
+    }
+]);
+
+
+// Example: Adding two dates
+db.collection.aggregate([
+    {
+        $project: {
+            totalDays: { $add: [new Date("2024-01-01"), 7] }
+        }
+    }
+]);
+
+*********************************************************************************************************************
+$subtract: Subtracts the second value from the first.
+
+// Example: Subtracting two numbers
+db.collection.aggregate([
+    {
+        $project: {
+            difference: { $subtract: [20, 5] }
+        }
+    }
+]);
+
+
+*********************************************************************************************************************
+
+
+$multiply: Multiplies numbers together.
+
+// Example: Multiplying two numbers
+db.collection.aggregate([
+    {
+        $project: {
+            product: { $multiply: [3, 4] }
+        }
+    }
+]);
+
+
+*********************************************************************************************************************
+
+$divide: Divides the first value by the second.
+
+// Example: Dividing two numbers
+db.collection.aggregate([
+    {
+        $project: {
+            quotient: { $divide: [15, 3] }
+        }
+    }
+]);
+
+
+*********************************************************************************************************************
+
+$mod: Returns the remainder of the division of the first value by the second.
+
+// Example: Finding the remainder
+db.collection.aggregate([
+    {
+        $project: {
+            remainder: { $mod: [10, 3] }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$abs: Returns the absolute value of a number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            absoluteValue: { $abs: -10 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+
+$floor: Returns the largest integer less than or equal to the specified number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            floorValue: { $floor: 5.7 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+
+$ceil: Returns the smallest integer greater than or equal to the specified number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            ceilValue: { $ceil: 5.7 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$mod: Returns the remainder of the division of the first value by the second.
+
+db.collection.aggregate([
+    {
+        $project: {
+            remainder: { $mod: [10, 3] }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$sqrt: Returns the square root of a number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            squareRoot: { $sqrt: 25 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$pow: Raises the first number to the power of the second number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            power: { $pow: [2, 3] }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$exp: Returns the exponent of a number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            exponent: { $exp: 2 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$log: Returns the natural logarithm of a number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            naturalLog: { $log: 10 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$log10: Returns the base 10 logarithm of a number.
+
+db.collection.aggregate([
+    {
+        $project: {
+            logBase10: { $log10: 100 }
+        }
+    }
+]);
+
+
+
+*********************************************************************************************************************
+
+
+$ln: Returns the natural logarithm of a number (same as $log).
+
+db.collection.aggregate([
+    {
+        $project: {
+            naturalLog: { $ln: 10 }
+        }
+    }
+]);
+
+*********************************************************************************************************************
+

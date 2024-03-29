@@ -1,0 +1,5 @@
+// Rename collection
+db.old_collection.renameCollection("new_collection")
+
+
+//Rename dadabase

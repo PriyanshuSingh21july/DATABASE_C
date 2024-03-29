@@ -1,0 +1,12 @@
+
+
+//Q. Delete database
+db.dropDatabase()
+db.dropDatabase()
+
+
+//Q. Delete collection in database
+Explain : db.collectionname.drop();
+Query : db.htmlPages.drop();
+
+

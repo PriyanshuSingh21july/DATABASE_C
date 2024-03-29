@@ -1,0 +1,65 @@
+MongoDB - $concat Operator
+The $concat operator concatenates multiple strings into a single string.
+
+
+db.collection.aggregate([
+    {
+        $project: {
+            fullName: { $concat: ["$firstName", " ", "$lastName"] }
+        }
+    }
+])
+********************************************************************************************************************
+MongoDB - $strcasecmp Operator
+The $strcasecmp operator compares two strings and returns:
+
+db.collection.aggregate([
+    {
+        $match: {
+            $expr: { $strcasecmp: ["$status", "active"] }
+        }
+    }
+])
+
+
+********************************************************************************************************************
+MongoDB - $toUpper Operator
+The $toUpper operator converts a string to uppercase.
+
+db.collection.aggregate([
+    {
+        $project: {
+            upperCaseName: { $toUpper: "$name" }
+        }
+    }
+])
+
+
+********************************************************************************************************************
+MongoDB - $toLower Operator
+The $toLower operator converts a string to lowercase.
+
+db.collection.aggregate([
+    {
+        $project: {
+            lowerCaseName: { $toLower: "$name" }
+        }
+    }
+])
+
+
+********************************************************************************************************************
+MongoDB - $substrCP Operator
+The $substrCP operator extracts a substring from a string field using code points.
+
+db.collection.aggregate([
+    {
+        $project: {
+            extractedSubstring: { $substrCP: ["$text", 5, 10] }
+        }
+    }
+])
+
+
+
+********************************************************************************************************************
