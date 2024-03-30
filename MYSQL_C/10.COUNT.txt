@@ -1,0 +1,26 @@
+/*  COUNT OPERATION      */
+ select count(EmployeeID)
+  FROM employe_data;
+*******************************************************************************************************************
+/*  COUNT OPERATION   with clause operation   */
+select count (status)
+from Shippings
+where customer>2;
+
+rom Shippings;
+
+*******************************************************************************************************************
+
+
+/* DISTINCT ingnore duplicate value              */
+
+select count (DISTINCT item)
+from Orders;
+
+rom Shippings;
+
+*******************************************************************************************************************
+
+Q.How can count person data in database
+Ans:   select count(EmployeeID)
+       FROM employe_data;

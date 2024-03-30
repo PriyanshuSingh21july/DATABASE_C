@@ -1,0 +1,13 @@
+SQL Create Index:
+CREATE INDEX idx_customer_name ON customers (customer_name);
+
+SQL Drop Index:
+DROP INDEX idx_customer_name ON customers;
+
+
+SQL Show Indexes:
+SHOW INDEXES FROM customers;
+
+
+SQL Unique Index:
+CREATE UNIQUE INDEX idx_unique_email ON users (email);

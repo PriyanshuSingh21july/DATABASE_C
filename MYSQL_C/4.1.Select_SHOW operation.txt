@@ -1,0 +1,94 @@
+Q.SQL SELECT Statement:
+This selects all columns from a table named users:
+SELECT * FROM users;
+
+
+
+
+*******************************************************************************************************************
+
+Q.SQL SELECT TOP:
+This selects the top 5 rows from the users table:
+SELECT TOP 5 * FROM users;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL SELECT LAST:
+SQL doesn't have a built-in LAST keyword. To get the last row, you can use ORDER BY and LIMIT:
+SELECT * FROM users ORDER BY id DESC LIMIT 1;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL SELECT RANDOM:
+SELECT * FROM users ORDER BY RAND() LIMIT 1;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL SELECT IN:
+SELECT * FROM users WHERE id IN (1, 2, 3);
+
+
+
+*******************************************************************************************************************
+
+Q.SQL SELECT Multiple:
+SELECT name, email FROM users;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL SELECT DATE:
+SELECT DATE(created_at) FROM users;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL INSERT Multiple Rows:
+INSERT INTO users (name, email) VALUES
+('John Doe', 'john@example.com'),
+('Jane Smith', 'jane@example.com');
+
+
+
+*******************************************************************************************************************
+
+Q.SQL INSERT INTO:
+INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
+
+
+
+*******************************************************************************************************************
+
+Q.SQL UPDATE Statement:
+UPDATE users SET name = 'Bob' WHERE id = 1;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL DELETE Statement:
+DELETE FROM users WHERE id = 1;
+
+
+
+*******************************************************************************************************************
+
+Q.SQL DELETE Duplicate Rows:
+DELETE FROM users 
+WHERE id NOT IN (
+    SELECT MIN(id) 
+    FROM users 
+    GROUP BY email
+);
+
+
+
+*******************************************************************************************************************

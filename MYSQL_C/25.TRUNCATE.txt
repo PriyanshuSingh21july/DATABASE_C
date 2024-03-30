@@ -1,0 +1,12 @@
+//TRUNCATE
+TRUNCATE TABLE table_name;
+
+
+
+*******************************************************************************************************************
+
+Q.TRUNCATE TABLE:
+
+The TRUNCATE TABLE statement is used to delete all rows from a table, but it keeps the table structure intact.
+
+TRUNCATE TABLE table_name;

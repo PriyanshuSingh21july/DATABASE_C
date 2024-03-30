@@ -1,0 +1,5 @@
+45.Having Clause
+count()
+min()
+max()
+avg()

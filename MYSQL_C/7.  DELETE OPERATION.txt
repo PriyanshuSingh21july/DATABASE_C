@@ -1,0 +1,16 @@
+/*    DELETE A PARTICULAR RECORD         */
+DELETE FROM  Customers WHERE first_name ="Robert";
+
+
+
+*******************************************************************************************************************
+
+/*    DELETE ALL TABLE        */
+DELETE FROM  Shippings;
+
+
+*******************************************************************************************************************
+
+Q.delete data in database
+  delete from table_name
+  where id=1;

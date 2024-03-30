@@ -1,0 +1,10 @@
+// union
+select customer_id from Customers
+union
+select customer_id from Orders
+
+Q.Union in two database
+
+select customer_id from table_name
+union
+select customer_id from table_name;

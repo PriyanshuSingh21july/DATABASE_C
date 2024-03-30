@@ -1,0 +1,7 @@
+// check databse exists or not
+create database  if not exists student;
+
+****************************************************************************************************************
+
+Q.how can check database exits of not
+Ans :  create database  if not exists student;

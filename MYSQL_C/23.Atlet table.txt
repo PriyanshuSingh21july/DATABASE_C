@@ -1,0 +1,12 @@
+// for add new column in database
+alter table student
+add column rollno int;
+
+******************************************************************************************************************
+
+Q.Add new column in table
+Ans:ALTER TABLE table_name
+    ADD COLUMN rollno INT;
+
+
+******************************************************************************************************************

@@ -1,0 +1,10 @@
+create database student;
+use student;
+
+*****************************************************************************************************************
+Question : How can create database
+Ans :  CREATE DATABASE database_name;  //Crate database 
+        then  use  database_name; // for use database and perform crud operation
+
+
+(*****)

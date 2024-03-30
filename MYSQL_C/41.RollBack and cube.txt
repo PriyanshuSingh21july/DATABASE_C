@@ -1,0 +1,24 @@
+41.RollBack and cube
+
+
+UPDATE Customers
+SET age = 25
+WHERE age < 25;
+
+
+If you decide you want to rollback the update, issue a rollback command:
+ROLLBACK;
+
+
+**********************************************************************************************************************
+Q.update salary of employee then rollback
+
+update table_name
+set Salary=10000000
+where id=1;
+
+RollBack;
+
+
+
+**********************************************************************************************************************

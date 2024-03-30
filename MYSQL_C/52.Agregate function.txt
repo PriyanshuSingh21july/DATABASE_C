@@ -1,0 +1,14 @@
+Q.SQL Aggregate Functions
+•SQL Count() Function
+•SQL SUM() Function
+•SQL MIN() Function
+•SQL MAX() Function
+•SQL AVG() Function
+
+Q.Min
+SELECT MIN(salary)
+FROM employees;
+
+Q.MAx
+SELECT MAX(age)
+FROM students;

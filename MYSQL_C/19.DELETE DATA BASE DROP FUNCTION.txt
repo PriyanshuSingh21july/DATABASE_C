@@ -1,0 +1,10 @@
+drop database student;
+or
+drop database if exists student;
+
+*******************************************************************************************************************
+
+Q.Delete database
+Ans :  drop database database;
+       or
+       drop database if exists database_name;

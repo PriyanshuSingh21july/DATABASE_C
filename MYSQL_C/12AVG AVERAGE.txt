@@ -1,0 +1,18 @@
+// Find average in database
+
+select AVG(amount)
+from Orders;
+
+// find average salary
+ select AVG(Salary) FROM employe_data 
+ where EmployeeID=3;
+
+ // find total employee average salary
+
+  select AVG(Salary) 
+  FROM employe_data;
+********************************************************************************************************************
+
+Q.find Avegare salary of all emolyee
+Ans:  select AVG(Salary) 
+       FROM employe_data;

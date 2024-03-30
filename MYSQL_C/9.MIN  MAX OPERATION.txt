@@ -1,0 +1,12 @@
+
+ // select minimu
+ SELECT MIN(Salary) FROM employe_data;
+
+
+// select maximum
+ SELECT MAX(Salary) FROM employe_data;
+
+******************************************************************************************************************
+Q.Select minium age /Salary in database
+Ans : select Min(Salary)
+      from table_name

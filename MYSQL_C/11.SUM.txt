@@ -1,0 +1,11 @@
+// Sum operation
+select sum (amount) AS TOTAL_AMOUNT
+from Orders;
+
+// Sum of salary
+  select SUM(Salary)
+  FROM employe_data;
+*******************************************************************************************************************
+Q.Sum of mark/salary in database
+Ans:select SUM(Salary)
+   FROM employe_data;

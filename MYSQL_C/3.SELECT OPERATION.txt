@@ -1,0 +1,84 @@
+/* 1.  GREATER THANA condition    
+SELECT * FROM Customers
+WHERE age>=20;
+*/
+
+*******************************************************************************************************************
+/* 2.  GREATER THANA condition     
+SELECT * FROM Customers
+WHERE age<=25;
+*/
+
+
+*******************************************************************************************************************
+
+
+/* 3. LIKE condition  
+SELECT * FROM Customers
+WHERE country LIKE 'USA';
+
+*/
+//
+SELECT * FROM employe_data
+WHERE DepartmentID IN ("1", "3");
+
+
+*******************************************************************************************************************
+
+/* 4. EUQAL OPERATION
+SELECT * FROM Customers
+WHERE customer_id=1;
+*/
+
+
+/*  5. BETWEEN OPERATION    
+SELECT * FROM Customers
+WHERE age BETWEEN 25 AND  30;
+
+
+*******************************************************************************************************************
+
+*/
+
+/* 6. IN OPERATION
+SELECT * FROM Customers
+WHERE country IN ("USA","UK"."USA");
+*/
+
+
+*******************************************************************************************************************
+
+/*  8. Select some particular data        */
+select  FirstName,Gender,Salary,City from  employe_data;
+
+*******************************************************************************************************************
+
+/*   9.Can we get data sorted as well as unsorted manner          */
+select  City, FirstName,Salary  from  employe_data;
+
+
+
+*******************************************************************************************************************
+
+/*  10.for acess top 3 record in table   */
+SELECT TOP 3 * FROM  employe_data;
+
+
+*******************************************************************************************************************
+
+/*  11.  selct 20 percent data    */
+select top 20 percent City from  employe_data;
+
+
+*******************************************************************************************************************
+/*  12.Select distint value in table line city/depment/unique        */
+select distinct State from employe_data;
+select distinct State,DepartmentID from employe_data;
+
+*******************************************************************************************************************
+13.Q.SQL SELECT Statement:
+This selects all columns from a table named users:
+SELECT * FROM users;
+
+
+Note : * Represent  "all columns"  of datable

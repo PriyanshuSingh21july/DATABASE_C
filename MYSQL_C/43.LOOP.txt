@@ -1,0 +1,9 @@
+43.LOOP
+
+DECLARE @i INT = 1;
+
+WHILE @i <= 5
+BEGIN
+    PRINT @i;
+    SET @i = @i + 1;
+END;

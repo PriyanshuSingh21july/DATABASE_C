@@ -1,0 +1,10 @@
+Single-line comments: These comments begin with two consecutive hyphens (--).
+
+-- This is a single-line comment
+SELECT * FROM customers;
+
+
+Multi-line comments: These comments start with /* and end with */. They can span multiple lines.
+/* This is a multi-line comment
+   that spans across multiple lines */
+  SELECT * FROM orders;

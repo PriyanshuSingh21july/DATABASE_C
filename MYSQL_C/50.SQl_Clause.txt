@@ -1,0 +1,50 @@
+Q.SQL WHERE Clause:
+
+The WHERE clause is used to filter records based on a specified condition.
+
+SELECT * 
+FROM customers 
+WHERE country = 'USA';
+
+*******************************************************************************************************************
+Q.SQL WITH Clause:
+WITH high_sales AS (
+    SELECT customer_id, SUM(amount) AS total_sales
+    FROM orders
+    GROUP BY customer_id
+    HAVING SUM(amount) > 1000
+)
+SELECT *
+FROM high_sales;
+
+
+*******************************************************************************************************************
+
+Q.SQL HAVING Clause:
+
+The HAVING clause is used to filter groups based on aggregate conditions when using the GROUP BY clause.
+
+SELECT category, COUNT(*)
+FROM products
+GROUP BY category
+HAVING COUNT(*) > 5;
+This query groups products by category and selects categories with more than 5 products.
+
+
+*******************************************************************************************************************
+
+Q.SQL ORDER BY Clause:
+
+The ORDER BY clause is used to sort the result set based on one or more columns.
+
+SELECT *
+FROM employees
+ORDER BY hire_date DESC;
+
+
+*******************************************************************************************************************
+
+Q.SQL LIMIT Clause:
+SELECT *
+FROM orders
+LIMIT 10;
