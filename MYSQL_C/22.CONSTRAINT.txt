@@ -1,0 +1,95 @@
+SQL Data Constraints
+
+•SQL NOT NULL Constraints
+•SQL UNIQUE Constraints
+•SQL Primary Key Constraints
+•SQL Foreign Key Constraints
+•SQL Composite Key
+•SQL Unique Constraints
+•SQL Alternate Key
+•SQL CHECK Constraints
+•SQL DEFAULT Constraints
+
+
+********************************************************************************************************************
+create table vivek(
+ID INT unique,
+name varchar(28),
+age int
+
+);
+
+unique : we can't insert  duplicate vaue of id beacuase its unique
+
+********************************************************************************************************************
+
+
+create table vivek(
+ID INT NOT NULL,
+name varchar(28),
+age int
+
+);
+
+NOT NULL: we can't  kept empty id nll bacause consytarint is not null
+
+********************************************************************************************************************
+
+
+create table vivek(
+ID INT,
+name varchar(28),
+age int not null check(age<=18),
+
+primary key(id)
+);
+
+********************************************************************************************************************
+•SQL Foreign Key Constraints
+CREATE TABLE Orders (
+    OrderID int PRIMARY KEY,
+    CustomerID int,
+    OrderDate date,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+********************************************************************************************************************
+
+SQL Composite Key:
+
+CREATE TABLE Employees (
+    EmployeeID int,
+    DepartmentID int,
+    PRIMARY KEY (EmployeeID, DepartmentID)
+);
+
+********************************************************************************************************************
+
+SQL Alternate Key:
+
+CREATE TABLE Students (
+    StudentID int PRIMARY KEY,
+    SSN varchar(11) UNIQUE,
+    StudentEmail varchar(100) UNIQUE
+);
+
+********************************************************************************************************************
+
+SQL CHECK Constraints:
+
+CREATE TABLE Employees (
+    EmployeeID int PRIMARY KEY,
+    Age int CHECK (Age >= 18)
+);
+
+
+********************************************************************************************************************
+SQL DEFAULT Constraints:
+
+CREATE TABLE Orders (
+    OrderID int PRIMARY KEY,
+    OrderDate date DEFAULT CURRENT_DATE
+);
+
+
+********************************************************************************************************************

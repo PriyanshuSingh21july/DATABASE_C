@@ -1,0 +1,49 @@
+
+Q.SQL NOT Operator:
+
+SELECT *
+FROM employees
+WHERE NOT department = 'HR';
+
+
+Q.SQL NOT EQUAL Operator:
+SELECT *
+FROM products
+WHERE category != 'Electronics';
+
+
+Q.SQL UNION Operator:
+
+The UNION operator is used to combine the result sets of two or more SELECT statements.
+
+SELECT product_name
+FROM products
+WHERE category = 'Electronics'
+UNION
+SELECT product_name
+FROM products
+WHERE category = 'Appliances';
+
+Q.SQL INTERSECT Operator:
+
+The INTERSECT operator is used to return the common rows between two SELECT statements.
+
+SELECT product_name
+FROM products
+WHERE category = 'Electronics'
+INTERSECT
+SELECT product_name
+FROM products
+WHERE brand = 'Samsung';
+
+Q.SQL EXISTS Operator:
+SELECT *
+FROM employees
+WHERE EXISTS (
+    SELECT 1
+    FROM orders
+    WHERE orders.employee_id = employees.employee_id
+);
+
+
+?// And , or ,not, in ,between , like
