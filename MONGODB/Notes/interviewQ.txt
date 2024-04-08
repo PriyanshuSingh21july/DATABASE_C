@@ -1,0 +1,32 @@
+What is MongoDB?
+How is MongoDB different from relational databases?
+Explain the structure of a MongoDB document.
+What is a collection in MongoDB?
+How do you create a database in MongoDB?
+Explain the basic syntax for inserting documents into a collection.
+What are the advantages of using MongoDB?
+How do you query documents in MongoDB?
+Explain the purpose of the _id field in MongoDB documents.
+How do you update documents in MongoDB?
+What is the purpose of indexes in MongoDB?
+How do you create an index in MongoDB?
+Explain the difference between find() and findOne() methods.
+What is aggregation in MongoDB? Provide an example.
+How do you delete documents in MongoDB?
+
+Intermediate Level:
+What are the different types of indexes in MongoDB?
+Explain the concept of sharding in MongoDB.
+How do you perform aggregation with the aggregate pipeline in MongoDB?
+What is a replica set in MongoDB? How does it work?
+How do you handle transactions in MongoDB?
+Explain the difference between embedded documents and references in MongoDB.
+What is a TTL index in MongoDB? How do you create one?
+How do you perform text search in MongoDB?
+What is the purpose of the explain() method in MongoDB?
+Explain the concept of data modeling in MongoDB.
+How do you deploy MongoDB in a production environment?
+What is the role of the MongoDB Atlas service?
+How do you handle schema changes in MongoDB?
+Explain the concept of GridFS in MongoDB.
+How do you secure MongoDB installations?
